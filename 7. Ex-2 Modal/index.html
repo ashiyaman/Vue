@@ -1,0 +1,17 @@
+<html>
+  <head>
+    <script src="https://unpkg.com/vue"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.3/css/bulma.css">
+
+  </head>
+  <body>
+    <div id="vue-app" class="container">
+      <modal v-if="showModal" @close="showModal=false"></modal>
+      <!-- if modal announces that it has made close event(it is a custom event),
+           showModal property will be updated-->
+      <!-- close is custom event listener -->
+      <button @click="showModal = true">Show Modal</button>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
