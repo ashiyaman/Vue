@@ -4,7 +4,7 @@ Vue.component('todo-item', {
 })
 
 var app = new Vue({
-  el: '#main',
+  el: '#vue-app',
   data: {
     newTodoText: '',
     todos: [

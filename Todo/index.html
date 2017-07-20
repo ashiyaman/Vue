@@ -3,22 +3,8 @@
     <script src="https://unpkg.com/vue"></script>
   </head>
   <body>
-    <div id="main">
-      <input
-        v-model="newTodoText"
-        placeholder="Add a Todo" >
-      <button
-        v-on:click="addTodo">Add New Todo</button>
-
-      <ul>
-        <li
-          is="todo-item"
-          v-for="(todo, index) in todos"
-          v-bind:item="todo"
-          v-bind:key = "index"
-          v-on:delete = "todos.splice(index, 1)" >
-        </li>
-      </ul>
+    <div id="vue-app">
+      
     </div>
     <script src="index.js"></script>
   </body>
