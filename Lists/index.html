@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <script src="https://unpkg.com/vue"></script>
+  </head>
+
+  <body>
+
+    <div id="vue-app">
+      <ul>
+        <li v-for="name in names">{{ name }}</li>
+        <!-- OR
+        <li v-for="name in names" v-text="name"></li> -->
+      </ul>
+
+      <!-- ********** Vue Way *************** -->
+      <input type="text" v-model="newName"/>
+      <button type="text" v-on:click="addName">Add Name</button>
+
+      <!-- ************ JS Way **************************
+      <input type="text" id="input"/>
+      <button type="button" id="button">Add Name</button>-->
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+
+</html>
