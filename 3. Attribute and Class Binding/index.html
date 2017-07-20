@@ -1,10 +1,30 @@
 <html>
   <head>
     <script src="https://unpkg.com/vue"></script>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <div id="vue-app">
+
+      <!-- %%%%%%%%%%%%%% ATTRIBUTE BINDING %%%%%%%%%%%%%%%%%%% -->
+      <button title="btnTitle">Hover Over Me</button>
+      <!-- title is reflected as btnTitle; not as value in btnTitle -->
+      <button v-bind:title="btnTitle">Hover Over Me</button>
+      <!-- binds to value in btnTitle -->
+      <!-- binds to attribute of an element -->
+
+      <!-- **************** JS Way **********************
+      <button title="I am the title of button">Hover Over Me</button>-->
+
       
+
+      <!-- %%%%%%%%%%%%%% CLASS BINDING %%%%%%%%%%%%%%%%%%% -->
+      <h2 :class="className">Heading</h2>
+
+      <div>
+        <button :class="{'is-loading': isLoading}" @click="toggleClass">Change My Color</button>
+        <button :disabled="isEnabled" @click="buttonEnable">Disable Me</button>
+      </div>
     </div>
     <script src="index.js"></script>
   </body>
