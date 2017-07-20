@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <title>Data Binding</title>
+    <script src="https://unpkg.com/vue"></script>
+  </head>
+
+  <body>
+
+    <!-- ******************** Normal Method ***********************
+    <input type="text" id="input">
+    <script>
+      let data = {
+        message: 'Hello World!'
+      }
+      //Dive into the DOM, fetch some elements, do something with it
+      document.querySelector('#input').value = data.message;
+    </script> -->
+
+    <!-- ********************** Vue Method *********************** -->
+
+    <div id="vue-app">
+      <!--connection bw data and view ie.bind the value
+      v-model is directive generally used for form inputs-->
+      <input type="text" v-model="message"/>
+      <p>Your Message: {{ message }} </p>
+    </div>
+
+    <script>
+      new Vue({
+        //Tell vue which area to control/work surface area
+        el: '#vue-app',
+        //data is like model for the view
+        //data is referred to as 'SINGLE SOURCE OF TRUTH' coz only changing data is sufficient
+        data:  {
+          message: 'Hello World'
+        }
+      })
+    </script>
+
+  </body>
+</html>
