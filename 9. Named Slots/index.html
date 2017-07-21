@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <script src="https://unpkg.com/vue"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.3/css/bulma.css">
+  </head>
+  <body>
+    <div id="vue-app">
+      <modal>
+        <!-- whatever we type here will be marked up in <slot>
+        My title
+        -->
+        <!-- Named Slot -->
+        <template slot="title">My Title</template>
+
+        <!-- main content outputted as <slot> -->
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Nobis tempore cum, error odio molestias totam temporibus
+
+
+        <!-- If template is provided, it will be applied
+            otherwise default in <slot> will be applied -->
+        <!--<template slot="footer">
+          <a class="button is-success">User footer</a>
+        </template>-->
+
+      </modal>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
