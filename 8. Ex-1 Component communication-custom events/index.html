@@ -1,0 +1,15 @@
+<html>
+  <head>
+    <script src="https://unpkg.com/vue"></script>
+  </head>
+  <body>
+    <div id="vue-app">
+      <!-- the parent says if child emits applied i need to update myself
+            I will call my onCouponApply method-->
+      <!-- communication btw parent and child -->
+      <coupon @applied="onCouponApply"></coupon>
+      <h3 v-if="validCoupon">You used a COUPON</h3>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
