@@ -19,9 +19,12 @@ Vue.component('tab-list', {
     }
   },
   created() {
+    //to loop through each tab
     this.tabs = this.$children
   },
   methods: {
+    //loop through all the tabs and set only selcted tabs's isActive
+    //property to true
     selectTab(selectedTab) {
       this.tabs.forEach(tab =>
         tab.isActive = (tab == selectedTab)
@@ -40,6 +43,8 @@ Vue.component('tab', {
   },
   data() {
     return {
+      //cannot mutate property selected
+      //hence need another property isActive
       isActive: false
     }
   },
