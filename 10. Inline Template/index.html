@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <script src="https://unpkg.com/vue"></script>
+  </head>
+  <body>
+    <div id="vue-app">
+      <!-- component only meant for a particular page
+            we want to store it inline not via JS -->
+
+      <!-- vue expects template from component but we are not providing -->
+      <!-- Hence inline-template -> anytihing between the tags should be considered
+           as template -->
+      <!-- Helpful when we want to make changes to 1 part dynamic-->
+
+      <progress-view inline-template>
+        <div>
+          <h2>Your progress is: {{ completionStatus }}%</h2>
+
+          <button @click="completionStatus += 10">Complete</button>
+        </div>
+      </progress-view>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
